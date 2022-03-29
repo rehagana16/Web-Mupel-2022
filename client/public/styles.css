@@ -1,0 +1,43 @@
+body {
+    background-image: url("/background.png");
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.full-height-box {
+    height: 100vh;
+}
+
+.logopermata {
+    width: 100px;
+    height: 104px;
+}
+
+.inputForm {
+    width: 357px;
+}
+
+.btn-primary {
+    background-color: #253858;
+}
+
+.marginbtm10 {
+    margin-bottom: 20px;
+}
+
+.labelRegistration {
+    font-size: 14px;
+    color: #6B778C;
+}
+
+.form-control {
+    border: 2px solid #A5A6F6;
+}
+
+.table td {
+    width: 150px;
+}
+
+.test {
+    background-color: white;
+}
