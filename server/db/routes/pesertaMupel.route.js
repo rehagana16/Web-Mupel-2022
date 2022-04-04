@@ -17,10 +17,14 @@ module.exports = app => {
     router.get("/", pesertaMupel.findAll);
 
     //Delete corresponding peserta 
-    router.delete("/:nama", pesertaMupel.delete);
+    router.delete("/:klasis", pesertaMupel.delete);
 
     //Delete all peserta 
     router.delete("/", pesertaMupel.deleteAll);
+
+    router.put("/updatePesertaId", pesertaMupel.updatePesertaId);
+
+    router.post("/upload", pesertaMupel.upload)
 
     app.use('/api/pesertaMupels', router);
 }

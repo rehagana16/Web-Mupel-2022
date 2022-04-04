@@ -8,6 +8,7 @@
 const db = require('../models');
 const PesertaMupel = db.pesertaMupels;
 const Op = db.Sequelize.Op;
+const {cloudinary} = require('../../util/cloudinary');
 
 exports.create = (req,res) => {
     if(!req.body.nama) { 
@@ -20,19 +21,22 @@ exports.create = (req,res) => {
     //create peserta mupel 
     const pesertaMupel = {
         nama: req.body.nama,
+        klasis: req.body.klasis,
+        pesertaId: req.body.pesertaId, 
         runggun: req.body.runggun,
-        klasis: req.body.klasis, 
-        bidang: req.body.bidang,
         jenisKelamin: req.body.jenisKelamin,
-        jabatan: req.body.jabatan,
+        noTelp: req.body.noTelp,
+        utusan: req.body.utusan,
         status: req.body.status,
-        foto: req.body.foto
+        foto: req.body.foto, 
+        isConfirmed: req.body.isConfirmed,
     };
     PesertaMupel.create(pesertaMupel)
         .then(data => {
             res.send(data);
         })
         .catch(err => {
+            console.log(pesertaMupel);
             res.status(500).send({
                 message: 
                     err.message || "Some error occured"
@@ -97,4 +101,39 @@ exports.deleteAll = (req, res) => {
             });
         });
 };
+
+exports.updatePesertaId = (req, res) => {
+    const id = req.body.id;
+    const pesertaId = req.body.pesertaId;
+    PesertaMupel.update({"pesertaId": pesertaId}, {
+        where: {
+            id : id,
+        }
+    })
+    .then(data => {
+        res.send(data);
+    })
+    .catch(err => {
+        res.status(500).send({
+            message:
+                err.message || " Some error occured"
+        });
+    });
+}
+
+exports.upload = async (req, res) => {
+    try{
+        const fileStr = req.body.data;
+        const uploadedResponse = await cloudinary.uploader
+            .upload(fileStr, {
+                upload_preset: 'ml_default'
+            })
+        console.log(uploadedResponse);
+        res.json(uploadedResponse);
+    } catch(error) {
+        console.log("ERROR UPLOAD");
+        console.error(error);
+        res.status(500).json({err:"something went wrong"})
+    }
+}
 

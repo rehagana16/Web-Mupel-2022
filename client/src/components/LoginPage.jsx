@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import AuthService from "../service/auth.service"
+import util from "../service/util";
+import jwt_decode from "jwt-decode"
 
 function LoginPage() {
 
@@ -29,7 +31,7 @@ function LoginPage() {
         e.preventDefault();
         AuthService.login(data.username, data.password).then(
             () => {
-                navigate("/registration");
+                navigate("/registration/?klasis=" + jwt_decode(util.getCookie("token"))["klasis"]);
                 window.location.reload();
             },
             (error) => {

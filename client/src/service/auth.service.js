@@ -7,7 +7,6 @@ const login = (username, password) => {
     })
     .then((response) => {
         document.cookie = "token= " + response.data;
-        console.log(response)
         return response
     })
 }
@@ -15,4 +14,4 @@ const login = (username, password) => {
 const AuthService = {
     login
   }
-  export default AuthService;
+export default AuthService;

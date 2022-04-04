@@ -1,5 +1,7 @@
 import React from "react";
 import LoginPage from "./components/LoginPage";
+import Pengumuman from "./components/Pengumuman";
+import DataPeserta from "./components/DataPeserta";
 
 import {
   BrowserRouter as Router,
@@ -15,7 +17,9 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' element={< LoginPage />}></Route>
-        <Route exact path='/registration' element={< RegistrationPage />}></Route>
+        <Route path='/registration' element={< RegistrationPage />}></Route>
+        <Route path='/pengumuman' element={< Pengumuman />}></Route>
+        <Route path='/dataPeserta' element={< DataPeserta />}></Route>
       </Routes>
     </Router>
   );

@@ -4,19 +4,26 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false
         },
-        runggun: {
+        klasis: {
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: false,
         },
-        bidang: {
+        pesertaId: {
+            type: Sequelize.STRING,
+        },
+        runggun: {
             type: Sequelize.STRING,
             allowNull: false
         },
         jenisKelamin: {
             type: Sequelize.STRING,
             allowNull: false
+        },
+        noTelp: {
+            type: Sequelize.STRING,
+            allowNull: false
         }, 
-        jabatan: {
+        utusan: {
             type: Sequelize.STRING,
             allowNull: false
         },
@@ -25,8 +32,13 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         foto: {
-            type: Sequelize.STRING
-        }
+            type: Sequelize.STRING,
+            allowNull: false
+        }, 
+        isConfirmed: {
+            type: Sequelize.BOOLEAN,
+            allowNull:false
+        },
     });
 
     return pesertaMupel;

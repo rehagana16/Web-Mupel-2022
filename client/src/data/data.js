@@ -3,7 +3,7 @@ const data = {
                  "Indra Kasih", "Mabar", "Pasar VI Delitua", "Pasar VII Namo Suro", "Patumbak Kampung",
                  "Talapeta", "Lau Gambir", "Percut", "Namo Serit", "Nogio Delitua", "Griya Martubung", "Kuta Baru"],
     "bidang" : ["Umum", "Pembinaan", "Konsolidasi", "Partisipasi", "Keuangan"],
-    "jabatan" : ["Pengurus Runggun", "Pengurus Klasis"]
+    "utusan" : ["Utusan Runggun", "Utusan Klasis"]
                 
 }
 

@@ -21,5 +21,6 @@ db.sequelize = sequelize;
 
 db.pesertaMupels = require('./pesertaMupel.model.js')(sequelize, Sequelize);
 db.accounts = require('./account.model.js')(sequelize, Sequelize);
+db.jumlahPeserta = require('./jumlahPeserta.model')(sequelize, Sequelize);
 
 module.exports = db;
