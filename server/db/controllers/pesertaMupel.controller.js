@@ -36,7 +36,6 @@ exports.create = (req,res) => {
             res.send(data);
         })
         .catch(err => {
-            console.log(pesertaMupel);
             res.status(500).send({
                 message: 
                     err.message || "Some error occured"
@@ -46,8 +45,8 @@ exports.create = (req,res) => {
 };
 
 exports.findAll = (req,res) => {
-    const nama = req.query.nama;
-    var condition = nama ? {nama: { [Op.like] : `%${nama}%`}} : null;
+    const nama = req.query.klasis;
+    var condition = nama ? {klasis: { [Op.like] : `%${nama}%`}} : null;
 
     PesertaMupel.findAll({where: condition})
         .then(data => {

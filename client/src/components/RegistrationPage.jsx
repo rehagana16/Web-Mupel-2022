@@ -44,7 +44,7 @@ const form = {
 }
 
 function RegistrationPage() {
-    const rungguns = data.runggun;
+    const rungguns = data[currKlasis];
     const ListRunggun = rungguns.map((runggun) =>
         <option>{runggun}</option>
     )
@@ -196,7 +196,7 @@ function RegistrationPage() {
                                     <div className="form-group marginbtm10">
                                         <div className="form-check form-check-inline">
                                             <label>
-                                                <Field type="radio" name="jenisKelamin" value="lakilaki" className="form-check-input" />
+                                                <Field type="radio" name="jenisKelamin" value="Laki-laki" className="form-check-input" />
                                                 Laki-laki
                                             </label>
                                         </div>

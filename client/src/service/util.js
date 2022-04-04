@@ -29,7 +29,7 @@ const getStatusCode = (value) => {
 }
 
 const getJenisKelaminCode = (value) => {
-    if (value.jenisKelamin === "lakilaki") {
+    if (value.jenisKelamin === "Laki-laki") {
         return "L"
     } return "P"
 }

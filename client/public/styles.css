@@ -72,8 +72,13 @@ body {
     border: 2px solid #A5A6F6;
 }
 
-.table td {
-    width: 150px;
+.table{
+    table-layout: fixed;
+    width: 75%;
+}
+
+td{
+    overflow: hidden;
 }
 
 .test {
