@@ -32,7 +32,7 @@ function LoginPage() {
         AuthService.login(data.username, data.password).then(
             () => {
                 navigate("/registration/?klasis=" + jwt_decode(util.getCookie("token"))["klasis"]);
-                window.location.reload();
+                //window.location.reload();
             },
             (error) => {
                 console.log(error.message);
@@ -45,11 +45,11 @@ function LoginPage() {
                 <div className="d-flex justify-content-center marginbtm10"><img src="/logopermata.png" className="logopermata" alt="gambar logo permata" /></div>
                 <div className="inputForm">
                     <form onSubmit={handleLogin}>
-                        <div class="form-group marginbtm10">
+                        <div className="form-group marginbtm10">
                             <input onChange={onChange} type="text" name="username" class="form-control" id="usernameinput" placeholder="Username" value={data.username} />
                             {data.username === "" && <p>Username tidak boleh kosong</p>}
                         </div>
-                        <div class="form-group marginbtm10">
+                        <div className="form-group marginbtm10">
                             <input onChange={onChange} type="password" name="password" class="form-control" id="passwordinput" placeholder="Password" value={data.password} />
                             {data.password === "" && <p>Password tidak boleh kosong</p>}
                         </div>

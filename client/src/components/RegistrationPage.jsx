@@ -8,6 +8,7 @@ import data from "../data/data";
 import axios from "axios";
 import util from "../service/util";
 import jwt_decode from "jwt-decode";
+import { Link } from "react-router-dom";
 
 const registerSchema = Yup.object().shape({
     nama: Yup.string()
@@ -28,12 +29,10 @@ const registerSchema = Yup.object().shape({
     foto: Yup.mixed().required("Harap masukkan foto anda"),
 })
 
-const currKlasis = util.getCookie("token") != "" ? jwt_decode(util.getCookie("token"))["klasis"] : "";
-
 const form = {
     nama: "",
     runggun: "",
-    klasis: currKlasis,
+    klasis: "",
     jenisKelamin: "",
     utusan: "",
     status: "",
@@ -44,7 +43,11 @@ const form = {
 }
 
 function RegistrationPage() {
+    const currKlasis = util.getCookie("token") != "" ? jwt_decode(util.getCookie("token"))["klasis"] : "HAHAH";
+    console.log(currKlasis)
     const rungguns = data[currKlasis];
+    form.klasis = currKlasis;
+    console.log(currKlasis)
     const ListRunggun = rungguns.map((runggun) =>
         <option>{runggun}</option>
     )
@@ -148,7 +151,7 @@ function RegistrationPage() {
                     <div className="d-flex justify-content-center align-items-center full-height-box">
                         <div className="d-flex flex-column">
                             <div className="inputForm">
-                                <Form>
+                                <Form className="marginbtm10">
                                     <div className="form-row">
                                         <label className="labelRegistration" htmlFor="nama">Nama</label>
                                         <Field
@@ -248,6 +251,8 @@ function RegistrationPage() {
                                         className="btn btn-primary"
                                         disabled={!(dirty && isValid)}>Submit</button>
                                 </Form>
+                                <Link to="/dataPeserta/?q=1" ><button
+                                    className="btn btn-primary">Lihat data</button></Link>
                             </div>
                         </div >
                     </div >
