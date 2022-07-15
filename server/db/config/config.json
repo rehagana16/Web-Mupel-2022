@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
+    "username": "permatagbkp_mupel_admin",
+    "password": "Admin_Mupel_#22",
+    "database": "permatagbkp_mupel_xxii",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {

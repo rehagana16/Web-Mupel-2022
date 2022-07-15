@@ -5,7 +5,7 @@ body {
 }
 
 .full-height-box {
-    height: 100vh;
+    height: 100%;
 }
 
 .one-third-width {
@@ -18,7 +18,8 @@ body {
 }
 
 .inputForm {
-    width: 357px;
+    width: 75%;
+    justify-content: center;
 }
 
 .form-row {
@@ -83,4 +84,36 @@ td{
 
 .test {
     background-color: white;
+}
+
+.logomupel {
+    width:20%;
+    border-right:2px solid #363e87;
+    margin-right:2rem;
+    padding: 0;
+    justify-content: right;
+}
+
+img.logomupel-width {
+    width: 50%;
+}
+
+.large-text {
+    font-size: large;
+}
+
+.top-right-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+}
+
+.warning {
+    font-size: 0.75rem;
+    color: #6B778C;
+}
+
+.login-box {
+    width: 30%;
 }

@@ -17,7 +17,7 @@ module.exports = app => {
     router.get("/", pesertaMupel.findAll);
 
     //Delete corresponding peserta 
-    router.delete("/:klasis", pesertaMupel.delete);
+    router.delete("/:id", pesertaMupel.delete);
 
     //Delete all peserta 
     router.delete("/", pesertaMupel.deleteAll);

@@ -1,0 +1,57 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "homepage": "https://mupel.permatagbkp.org",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.25.0",
+    "detect-indent": "^7.0.0",
+    "express-session": "^1.17.2",
+    "formik": "^2.2.9",
+    "is-plain-obj": "^4.0.0",
+    "jwt-decode": "^3.1.2",
+    "react": "^17.0.2",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.0",
+    "react-table": "^7.7.0",
+    "sort-keys": "^5.0.0",
+    "web-vitals": "^1.1.2",
+    "write-file-atomic": "^4.0.1",
+    "write-json-file": "^5.0.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080/",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

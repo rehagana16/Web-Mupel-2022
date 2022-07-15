@@ -10,6 +10,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         pesertaId: {
             type: Sequelize.STRING,
+            primaryKey: true
         },
         runggun: {
             type: Sequelize.STRING,

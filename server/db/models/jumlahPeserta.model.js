@@ -7,7 +7,7 @@ module.exports = (sequelize, Sequelize) => {
         jumlahPeserta: {
             type: Sequelize.INTEGER,
             allowNull: false
-        },
+        }
     });
 
     return jumlahPeserta;

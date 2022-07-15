@@ -1,0 +1,119 @@
+body {
+    background-image: url("/background.png");
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.full-height-box {
+    height: 100vh;
+}
+
+.one-third-width {
+    width: 33%;
+}
+
+.logopermata {
+    width: 100px;
+    height: 104px;
+}
+
+.inputForm {
+    width: 75%;
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-error:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.input-error {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 2px solid #e63946;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.error {
+    color: #e63946;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+}
+
+.btn-primary {
+    background-color: #253858;
+}
+
+.marginbtm10 {
+    margin-bottom: 20px;
+}
+
+.labelRegistration {
+    font-size: 14px;
+    color: #6B778C;
+}
+
+.form-control {
+    border: 2px solid #A5A6F6;
+}
+
+.table{
+    table-layout: fixed;
+    width: 75%;
+}
+
+td{
+    overflow: hidden;
+}
+
+.test {
+    background-color: white;
+}
+
+.logomupel {
+    width:20%;
+    border-right:2px solid #363e87;
+    margin-right:2rem;
+    padding: 0;
+    justify-content: right;
+}
+
+img.logomupel-width {
+    width: 50%;
+}
+
+.large-text {
+    font-size: large;
+}
+
+.top-right-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+}
+
+.warning {
+    font-size: 0.75rem;
+    color: #6B778C;
+}
+
+.login-box {
+    width: 30%;
+}

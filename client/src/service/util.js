@@ -34,10 +34,6 @@ const getJenisKelaminCode = (value) => {
     } return "P"
 }
 
-const getNumberPeserta = (value) => {
-    const res = axios.get("http://localhost:8080/api/jumlahPeserta/" + value.klasis);
-    return res;
-}
 
 const pad = (num, size) => {
     num = num.toString();
@@ -50,7 +46,6 @@ const util = {
     getUtusanCode,
     getStatusCode,
     getJenisKelaminCode,
-    getNumberPeserta,
     pad,
 }
 

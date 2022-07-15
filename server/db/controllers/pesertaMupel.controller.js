@@ -46,7 +46,7 @@ exports.create = (req,res) => {
 
 exports.findAll = (req,res) => {
     const nama = req.query.klasis;
-    var condition = nama ? {klasis: { [Op.like] : `%${nama}%`}} : null;
+    var condition = nama ? {klasis: `${nama}`} : null;
 
     PesertaMupel.findAll({where: condition})
         .then(data => {
@@ -61,19 +61,19 @@ exports.findAll = (req,res) => {
 };
 
 exports.delete = (req,res) => {
-    const nama = req.params.nama;
+    const id = req.params.id;
 
     PesertaMupel.destroy({
-        where: {nama: nama}
+        where: {id: id}
     })
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "Tutorial was deleted successfully"
+                    message: "Peserta was deleted successfully"
                 });
             } else {
                 res.send({
-                    message: `Cannot delete Tutorial with id = ${id}`
+                    message: `Cannot delete Peserta with id = ${id}`
                 });
             }
         })
